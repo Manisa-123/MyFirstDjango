@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello {{firstname}}, How are you?</h1>
+    {% with name="Mimi" %}
+    <h2>It's me {{ name }}, Hehehe</h2>
+    {% endwith %}
+
+    {% if firstname == "Bujiii" %}
+    <p>Hey!! Bujiii</p>
+    {% elif firstname == "Bujii" %}
+    <p>Elf if Excecuted</p>
+    {% else %}}
+    <p>Hey!! Mimi</p>
+    {% endif %}
+
+    {% if greeting %}
+    <p>Greeeting</p>
+    {% endif %}
+
+    {% for x in mymembers %}
+    <li>{{ x.firstname }} </li>
+    {% endfor %}
+
+    {% if greeting == 1 and day == "Friday" or greeting == 5 %}
+    <h1>Hello Weekend!</h1>
+    {% endif %}  
+
+    {% with var1=x var2=x %}
+  {% if var1 is var2 %}
+    <h1>YES</h1>
+  {% else %}
+    <h1>NO</h1>
+  {% endif %}
+{% endwith %}
+    
+
+</body>
+</html>

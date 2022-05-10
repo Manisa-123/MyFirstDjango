@@ -1,0 +1,35 @@
+<h1>Members</h1>
+<style>
+    table,td,tr{
+        text-align: center;
+        text-justify: distribute;
+    }
+    th, td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
+</style>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Girl Name</th>
+        <th>Boy Name</th>>
+        <th>   Options   </th>
+    </tr>
+{% for x in mymembers  %}
+<tr style='background-color:{% cycle 'lightblue' 'pink' 'yellow' 'coral' 'grey' %}'>
+
+<td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+<td>{{ x.firstname }} </td>
+<td>{{ x.lastname }}</td>
+<td><a href="delete/{{x.id}}">Delete</a></td>
+
+</tr>
+{% endfor %}
+</table>
+
+<h2>
+<a href="add/">Add Couple</a>
+</h2> 
